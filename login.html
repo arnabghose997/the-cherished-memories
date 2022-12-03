@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-form">
+    <img src="assets/logo.jpg" alt="placeholder image">
+    <form>
+      <div class="form-group">
+        <input type="text" id="username" placeholder="Enter your username">
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Enter your password">
+        <p id="caps-lock-notify">Caps Lock is ON !</p>
+      </div>
+      <div class="form-group">
+        <div class="button-group">
+          <input type="submit" value="Log in">
+          <input type="button" value="Register">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <script>
+    var passwordField = document.getElementById("password")
+    var capsLockTextSpan = document.getElementById("caps-lock-notify")
+
+    passwordField.addEventListener("keyup", (event) => {
+      if (event.getModifierState("CapsLock")) {
+        capsLockTextSpan.style.display = "block";
+      } else {
+        capsLockTextSpan.style.display = "none"
+      }
+    })
+  </script>  
+
+</body>
+</html>
