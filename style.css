@@ -3,6 +3,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
+::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+:-moz-placeholder {
+     font-size: 15px;
+}
+
+/* Login Form */
+
 .login-form {
   width: 300px;
   margin: 100px auto;
@@ -49,11 +59,6 @@ body {
   justify-content: space-between;
 }
 
-
-::-webkit-input-placeholder {
-  font-size: 15px;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-     font-size: 15px;
+#caps-lock-notify {
+  color: tomato
 }
